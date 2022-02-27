@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
+require('dotenv').config()
 
 mongoose.connect(
-  "mongodb+srv://root:1234@cluster0.ijjkb.mongodb.net/DemoCRUD?retryWrites=true&w=majority",
+  process.env.MONGODB_URI,
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
